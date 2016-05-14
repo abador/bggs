@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BoardGameGeekExampleApp</string>
+    <string name="search">Search</string>
+    <string name="my_games">My Games</string>
+    <string name="boardgame_name">Boardgame name</string>
 </resources>
