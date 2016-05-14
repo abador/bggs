@@ -1,4 +1,4 @@
-package olsys.com.boardgamegeekexampleapp;
+package com.olsys.boardgamegeekexampleapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

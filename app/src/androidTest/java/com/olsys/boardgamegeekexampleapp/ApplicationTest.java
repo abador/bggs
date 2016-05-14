@@ -1,4 +1,4 @@
-package olsys.com.boardgamegeekexampleapp;
+package com.olsys.boardgamegeekexampleapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
