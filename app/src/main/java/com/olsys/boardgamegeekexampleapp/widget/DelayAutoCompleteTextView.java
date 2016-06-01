@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.ProgressBar;
 
+import com.olsys.utils.Log;
+
 /**
  * Created on 02.11.15.
  * TODO: Add a class header comment!
@@ -15,7 +17,7 @@ import android.widget.ProgressBar;
  * @author Przemysław Czaus (przemyslaw@czaus.pl)
  */
 public class DelayAutoCompleteTextView extends AutoCompleteTextView {
-
+    private static String TAG = "DelayAutoCompleteTextView";
     private static final int MESSAGE_TEXT_CHANGED = 100;
     private static final int DEFAULT_AUTOCOMPLETE_DELAY = 750;
 
@@ -46,6 +48,7 @@ public class DelayAutoCompleteTextView extends AutoCompleteTextView {
         if (mLoadingIndicator != null) {
             mLoadingIndicator.setVisibility(View.VISIBLE);
         }
+        Log.d(TAG, "performFiltering");
         mHandler.removeMessages(MESSAGE_TEXT_CHANGED);
         mHandler.sendMessageDelayed(mHandler.obtainMessage(MESSAGE_TEXT_CHANGED, text), mAutoCompleteDelay);
     }
@@ -55,6 +58,7 @@ public class DelayAutoCompleteTextView extends AutoCompleteTextView {
         if (mLoadingIndicator != null) {
             mLoadingIndicator.setVisibility(View.GONE);
         }
+        Log.d(TAG, "onFilterComplete");
         super.onFilterComplete(count);
     }
 }
